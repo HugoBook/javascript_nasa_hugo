@@ -1,0 +1,146 @@
+@charset "UTF-8";
+*, html {
+  padding: 0;
+  margin: 0;
+  box-sizing: border-box;
+}
+
+body {
+  font-family: "Gill Sans", "Gill Sans MT", Calibri, "Trebuchet MS", sans-serif;
+  padding: 1rem;
+}
+
+img {
+  display: block;
+  -o-object-fit: cover;
+     object-fit: cover;
+}
+
+.dark {
+  background-color: #020a68;
+  color: #ffffff;
+}
+.dark a {
+  color: #ffffff;
+}
+
+.main-container {
+  max-width: 900px;
+  margin: auto;
+}
+.main-container .main-header div {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  margin: 1rem;
+}
+.main-container .main-header div .logo img {
+  height: 200px;
+  width: 200px;
+}
+.main-container .main-header div .switchBtn {
+  position: relative;
+  display: inline-block;
+  width: 80px;
+  height: 40px;
+}
+.main-container .main-header div .switchBtn input {
+  opacity: 0;
+  width: 0;
+  height: 0;
+}
+.main-container .main-header div .switchBtn .slider {
+  position: absolute;
+  cursor: pointer;
+  top: 0;
+  left: 0;
+  right: 0;
+  bottom: 0;
+  background-color: #1e1e1e;
+  transition: 0.4s;
+  border-radius: 50px;
+}
+.main-container .main-header div .switchBtn .slider:before {
+  position: absolute;
+  content: "";
+  height: 30px; /* Gör knappen lite större */
+  width: 30px; /* Gör knappen lite större */
+  left: 5px; /* Justera positionen för att centrera */
+  bottom: 5px; /* Justera positionen för att centrera */
+  background-color: white;
+  transition: 0.4s;
+  border-radius: 50%; /* Gör knappen rundad */
+}
+.main-container .main-header div .switchBtn input:checked + .slider {
+  background-color: #1e1e1e;
+}
+.main-container .main-header div .switchBtn input:focus + .slider {
+  box-shadow: 0 0 1px;
+}
+.main-container .main-header div .switchBtn input:checked + .slider:before {
+  transform: translateX(40px);
+}
+.main-container main {
+  background-color: gray;
+  padding: 1.5rem;
+  margin-bottom: 1rem;
+}
+.main-container main .whatisurname {
+  text-align: center;
+}
+.main-container main .whatisurname form {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+}
+.main-container main .whatisurname form .inputField {
+  margin: 2rem 0;
+}
+.main-container main .whatisurname form .inputField label {
+  position: absolute;
+  opacity: 0;
+  cursor: pointer;
+  height: 0;
+  width: 0;
+}
+.main-container main .whatisurname form .inputField #username {
+  outline: none;
+  border: none;
+}
+.main-container main .whatisurname form .inputField input {
+  padding: 0.75rem 3rem 0.75rem 1rem;
+  border-radius: 16px;
+  margin-right: 1rem;
+}
+.main-container main .whatisurname form .inputField button {
+  padding: 0.75rem 1rem;
+  border-radius: 16px;
+  border: none;
+  background-color: #1e1e1e;
+  color: white;
+  font-weight: 500;
+}
+.main-container main .whatisurname form .inputField button:disabled {
+  background-color: rgb(205, 205, 205);
+  cursor: not-allowed;
+  color: grey;
+}
+.main-container .imageContainer {
+  margin-top: 1rem;
+  display: flex;
+  flex-wrap: wrap;
+  gap: 1rem;
+  justify-content: space-between;
+}
+.main-container .imageContainer .card {
+  flex-basis: calc(50% - 0.5rem);
+}
+.main-container .imageContainer .card img {
+  width: 100%;
+  height: auto;
+  -o-object-fit: cover;
+     object-fit: cover;
+}
+.main-container .imageContainer .card p {
+  font-size: 1rem;
+}/*# sourceMappingURL=style.css.map */

@@ -1,0 +1,163 @@
+$darkmode-dark: #020a68;
+$darkmode-text: #ffffff;
+
+*,html{
+    padding: 0;
+    margin: 0;
+    box-sizing: border-box;
+}
+
+body{
+    font-family: 'Gill Sans', 'Gill Sans MT', Calibri, 'Trebuchet MS', sans-serif;
+    padding: 1rem;
+}
+
+img{
+    display: block;
+    object-fit: cover;
+}
+
+.dark {
+    background-color: $darkmode-dark;
+    color: $darkmode-text;
+
+    a {
+        color: $darkmode-text;
+    }
+}
+
+.main-container{
+    max-width: 900px;
+    margin: auto;
+    .main-header{
+        div{
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
+            margin: 1rem;
+            .logo{
+                img{
+                    height: 200px;
+                    width: 200px;
+                }
+            }
+            .switchBtn {
+                position: relative;
+                display: inline-block;
+                width: 80px;
+                height: 40px; 
+            
+                input {
+                    opacity: 0;
+                    width: 0;
+                    height: 0;
+                }
+            
+                .slider {
+                    position: absolute;
+                    cursor: pointer;
+                    top: 0;
+                    left: 0;
+                    right: 0;
+                    bottom: 0;
+                    background-color: #1e1e1e;
+                    transition: .4s;
+                    border-radius: 50px;
+            
+                    &:before {
+                        position: absolute;
+                        content: "";
+                        height: 30px; /* Gör knappen lite större */
+                        width: 30px; /* Gör knappen lite större */
+                        left: 5px; /* Justera positionen för att centrera */
+                        bottom: 5px; /* Justera positionen för att centrera */
+                        background-color: white;
+                        transition: .4s;
+                        border-radius: 50%; /* Gör knappen rundad */
+                    }
+                }
+            
+                input:checked + .slider {
+                    background-color: #1e1e1e;
+                }
+            
+                input:focus + .slider {
+                    box-shadow: 0 0 1px ;
+                }
+            
+                input:checked + .slider:before {
+                    transform: translateX(40px);
+                }
+            }
+        }
+    }
+    main{
+        background-color: gray;
+        padding: 1.5rem;
+        margin-bottom: 1rem;
+        .whatisurname{
+            text-align: center;
+            form{
+                display: flex;
+                flex-direction: column;
+                align-items: center;
+                .inputField{
+                    margin: 2rem 0;
+                    label {
+                        position: absolute;
+                        opacity: 0;
+                        cursor: pointer;
+                        height: 0;
+                        width: 0;
+                    }
+                    #username{
+                        outline: none;
+                        border: none;
+                    }
+                    input{
+                        padding: .75rem 3rem .75rem 1rem;
+                        border-radius: 16px;
+                        margin-right: 1rem;
+                    }
+                    button{
+                        padding: .75rem 1rem;
+                        border-radius: 16px;
+                        border: none;
+                        background-color: #1e1e1e;
+                        color: white;
+                        font-weight: 500;
+                        &:disabled {
+                            background-color: rgb(205, 205, 205);
+                            cursor: not-allowed;
+                            color: grey;
+                        }
+                    }
+                }
+            }
+        }
+        
+    }
+    .imageContainer {
+        margin-top: 1rem;
+        display: flex;
+        flex-wrap: wrap;
+        gap: 1rem;
+        //Justera utrymmet mellan korten
+        justify-content: space-between; 
+        //50% bredd minus gap
+        .card {
+            flex-basis: calc(50% - 0.5rem);
+            img {
+                //Fyller hela bredden av kortet
+                width: 100%; 
+                height: auto; 
+                object-fit: cover;
+            }
+            p {
+                font-size: 1rem;
+        
+            }
+        }
+    }
+}
+    

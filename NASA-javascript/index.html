@@ -1,0 +1,45 @@
+<!DOCTYPE html>
+<html lang="sv">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Nasa</title>
+    <link rel="stylesheet" href="style.css">
+</head>
+<body>
+    <div class="main-container">
+        <header class="main-header">
+            <div>
+                <figure class="logo">
+                    <img src="img/lajka-logo.png" alt="Logo Nasa">
+                </figure>
+                <label class="switchBtn" >
+                    <input type="checkbox" id="switchBtn">
+                    <span class="slider"></span>
+                </label>
+            </div>
+        </header>
+        <main>
+            <div class="whatisurname">
+                <h1>Vad är ditt austronamn?</h1>
+                <form autocomplete="off">
+                    <div class="inputField">
+                        <label for="username"> Användarnamn</label>
+                        <input id="username" type="text" placeholder="Ditt namn">
+                        <button id="btnLogin" disabled>RENSA NAMN</button>
+                    </div>
+                </form>
+                    <h2 id="displayUsername"></h2>
+            </div>
+        </main>
+        <section>
+            <h3>Lite snygga bilder från mars</h3>
+            <div class="imageContainer">
+                
+            </div>
+        </section>
+        
+    </div>
+    <script src="script.js"></script>
+</body>
+</html>
